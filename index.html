@@ -12,13 +12,14 @@
   <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" async></script>
   <script src="./src/start-polymer3.js" type="module" async></script>
   <!--script>
+    // Load Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/src/serviceworker.js').then(function(registration) {
           // Registration was successful
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
-          // registration failed :(
+          // Registration failed
           console.log('ServiceWorker registration failed: ', err);
         });
       });
