@@ -10,8 +10,7 @@
   ],
   "extraDependencies": [
     "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**",
-    "serviceworker.js"
+    "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [
     { "preset": "es5-bundled" },
