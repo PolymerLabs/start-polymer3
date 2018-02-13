@@ -9,7 +9,7 @@
   <link rel="icon" href="manifest/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <link rel="canonical" href="https://start-polymer3.firebaseapp.com/" />
-  <!--script>
+  <script>
     // Load Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -22,9 +22,9 @@
         });
       });
     }
-  </script-->
-  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-  <script src="./src/start-polymer3.js" type="module"></script>
+  </script>
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" async></script>
+  <script src="./src/start-polymer3.js" type="module" async></script>
   <title>Start Polymer 3.0</title>
 </head>
 <body>
