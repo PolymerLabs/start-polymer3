@@ -1,0 +1,11 @@
+{
+  "name": "start-polymer3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/katejeffreys/start-polymer3.git",
+  "author": "Kate Jeffreys",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.9"
+  }
+}
