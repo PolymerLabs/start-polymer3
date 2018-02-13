@@ -105,12 +105,15 @@ To enable the service worker, uncomment the loading code in index.html:
 When served locally out-of-the-box, this app will have the following Lighthouse audit failures:
 
 * **PWA**: All audits that depend on a Service Worker will fail. 
+  
   To resolve these audit failures, [enable the service worker](#serviceworker).
 
 * **Best Practices**: Does not use HTTP/2. 
+  
   To resolve this audit failure, deploy the app to a server that uses HTTP/2 - for example, [Firebase](https://firebase.google.com/).
 
 * **SEO**: Does not have a valid `rel=canonical`. 
+  
   To resolve this audit failure, in `index.html`, update the following line of code:
   
   ```html
