@@ -1,0 +1,7 @@
+.vscode
+.DS_Store
+public
+build
+.firebaserc
+firebase.json
+node_modules
