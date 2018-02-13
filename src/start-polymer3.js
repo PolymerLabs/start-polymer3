@@ -1,4 +1,4 @@
-import { Element as PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-element.js';
+import { Element as PolymerElement, html } from "../node_modules/@polymer/polymer/polymer-element.js";
 
 class StartPolymer3 extends PolymerElement {
   static get properties () {

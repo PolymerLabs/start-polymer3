@@ -9,8 +9,7 @@
 var CACHE_NAME = 'start-polymer3-cache';
 var urlsToCache = [
   '/',
-  '/index.html',
-  '/start-polymer3.js'
+  '/index.html'
 ];
 
 self.addEventListener('install', function(event) {

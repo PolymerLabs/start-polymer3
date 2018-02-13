@@ -1,7 +1,7 @@
 {
   "name": "start-polymer3",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/start-polymer3.js",
   "repository": "https://github.com/katejeffreys/start-polymer3.git",
   "author": "Kate Jeffreys",
   "license": "MIT",
