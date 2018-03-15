@@ -1,24 +1,55 @@
-import { Element as PolymerElement, html } from "../node_modules/@polymer/polymer/polymer-element.js";
+// Import statements use bare module specifiers.
+// polymer-element.js now exports PolymerElement instead of Element,
+// so no need to change the symbol. 
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/lib/elements/dom-if.js';
+import '@polymer/paper-checkbox/paper-checkbox.js';
 
 class StartPolymer3 extends PolymerElement {
   static get properties () {
     return {
       message: {
         type: String,
-        value: "Hello World! I'm a Polymer element :)"
+        value: ''
+      },
+      pie: {
+        type: Boolean,
+        value: false
       }
     };
   }
+
+  constructor() {
+    // If you override the constructor, always call the 
+    // superconstructor first.
+    super();
+    this.message = 'Hello World! I\'m a Polymer element :)';
+  }
+
   ready(){
+    // If you override ready, always call super.ready() first.
     super.ready();
-    // Output the custom element's HTML tag to the browser console
-    // Open your browser's developer tools to view the output
+    // Output the custom element's HTML tag to the browser console.
+    // Open your browser's developer tools to view the output.
     console.log(this.tagName);
   }
+
+  togglePie(event){
+    this.pie=event.detail.value;
+  }
+
   static get template () {
+    // Template getter must return an instance of HTMLTemplateElement.
+    // The html helper function makes this easy.
     return html`
       <h1>Start Polymer 3.0</h1>
       <p>[[message]]</p>
+      <paper-checkbox 
+        checked=[[pie]]
+        on-checked-changed="togglePie">I like pie.</paper-checkbox>
+      <template is="dom-if" if=[[pie]]>
+        <p>You like pie.</p>
+      </template>
     `;
   }
 }
