@@ -17,7 +17,8 @@ Run the [quick start](#quickstart) commands if you've done this before, or follo
 ```
 git clone https://github.com/katejeffreys/start-polymer3.git
 cd start-polymer3
-polymer serve --open --npm
+npm install
+polymer serve --open
 ```
 
 <a name="install"></a>
@@ -51,7 +52,7 @@ When you've installed the Polymer CLI and its dependencies, run the following co
 ```
 git clone https://github.com/katejeffreys/start-polymer3.git
 cd start-polymer3
-polymer serve --open --npm
+polymer serve --open
 ```
 
 <a name="serviceworker"></a>
@@ -122,4 +123,4 @@ When served locally out-of-the-box, this app will have the following Lighthouse 
   
   Replace the URL with your app URL before deploying.
 
-After enabling the service worker, the app should have excellent results on all Lighthouse audits. Visit [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com) to see a deployed version of this app.
+After making the changes above, the app should have excellent results on all Lighthouse audits. Visit [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com) to see a deployed version of this app.
