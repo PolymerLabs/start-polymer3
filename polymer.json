@@ -14,9 +14,11 @@
     "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [
-    { "preset": "es6-unbundled",
-      "moduleResolution": "none",
+    { 
+      "preset": "es6-unbundled",
       "addServiceWorker": true
     }
-  ]
+  ],
+  "moduleResolution": "node",
+  "npm": true
 }

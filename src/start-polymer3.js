@@ -1,9 +1,9 @@
 // Import statements in Polymer 3.0 can now use package names.
 // polymer-element.js now exports PolymerElement instead of Element,
 // so no need to change the symbol. 
-import { Element as PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-element.js';
-import '../node_modules/@polymer/polymer/lib/elements/dom-if.js';
-import '../node_modules/@polymer/paper-checkbox/paper-checkbox.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/lib/elements/dom-if.js';
+import '@polymer/paper-checkbox/paper-checkbox.js';
 
 class StartPolymer3 extends PolymerElement {
   static get properties () {
