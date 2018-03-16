@@ -61,7 +61,7 @@ class StartPolymer3 extends PolymerElement {
         checked=[[pie]]
         on-checked-changed="togglePie">I like pie.</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <lazy-element></lazy-element>
+        <lazy-element>lazy loading...</lazy-element>
       </template>
     `;
   }
