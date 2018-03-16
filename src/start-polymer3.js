@@ -4,7 +4,6 @@
 import { Element as PolymerElement, html } from '../node_modules/@polymer/polymer/polymer-element.js';
 import '../node_modules/@polymer/polymer/lib/elements/dom-if.js';
 import '../node_modules/@polymer/paper-checkbox/paper-checkbox.js';
-import { importHref } from '../node_modules/@polymer/polymer/lib/utils/import-href.js';
 
 class StartPolymer3 extends PolymerElement {
   static get properties () {
