@@ -39,7 +39,7 @@ class StartPolymer3 extends PolymerElement {
   }
   
   togglePie(event){
-    if(!this.loadComplete) {
+    if(this.pie && !this.loadComplete) {
       // See https://developers.google.com/web/updates/2017/11/dynamic-import
       import('./lazy-element.js').then((LazyElement) => {
         console.log("LazyElement loaded");
