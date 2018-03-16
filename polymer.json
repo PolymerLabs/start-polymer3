@@ -2,18 +2,21 @@
   "entrypoint": "index.html",
   "shell": "src/start-polymer3.js",
   "fragments": [
+    "src/lazy-element.js"
   ],
   "sources": [
-   "src/**/*",
+   "src/start-polymer3.js",
    "manifest/**",
    "package.json"
   ],
   "extraDependencies": [
     "manifest.json",
-    "node_modules/@webcomponents/webcomponentsjs/**",
-    "serviceworker.js"
+    "node_modules/@webcomponents/webcomponentsjs/**"
   ],
   "builds": [
-    { "preset": "es6-unbundled" }
+    { "preset": "es6-unbundled",
+      "moduleResolution": "none",
+      "addServiceWorker": true
+    }
   ]
 }
