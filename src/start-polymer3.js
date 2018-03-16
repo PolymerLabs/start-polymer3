@@ -46,6 +46,7 @@ class StartPolymer3 extends PolymerElement {
       }).catch((reason) => {
         console.log("LazyElement failed to load", reason);
       });
+      this.loadComplete = true;
     }
     this.pie=event.detail.value;
   }
