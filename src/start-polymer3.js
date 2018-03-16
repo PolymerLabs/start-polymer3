@@ -14,7 +14,8 @@ class StartPolymer3 extends PolymerElement {
       },
       pie: {
         type: Boolean,
-        value: false
+        value: false,
+        observer: 'togglePie'
       },
       loadComplete: {
         type: Boolean,
@@ -49,7 +50,7 @@ class StartPolymer3 extends PolymerElement {
       });
       this.loadComplete = true;
     }
-    this.pie=event.detail.value;
+    //this.pie=event.detail.value;
   }
 
   static get template () {
@@ -59,10 +60,10 @@ class StartPolymer3 extends PolymerElement {
       <h1>Start Polymer 3.0</h1>
       <p>[[message]]</p>
       <paper-checkbox 
-        checked={{pie}}
-        on-checked-changed="togglePie">I like pie.</paper-checkbox>
+        checked={{pie}}>I like pie.</paper-checkbox>
+        <!-- on-checked-changed="togglePie"-->
       <template is="dom-if" if=[[pie]]>
-        <lazy-element>lazy loading...</lazy-element>
+        <lazy-element><p>lazy loading...</p></lazy-element>
       </template>
     `;
   }
