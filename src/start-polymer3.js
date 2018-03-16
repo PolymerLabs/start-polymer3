@@ -39,8 +39,7 @@ class StartPolymer3 extends PolymerElement {
     console.log(this.tagName);
   }
   
-  togglePie(event){
-    console.log(this.pie);
+  togglePie(){
     if(this.pie && !this.loadComplete) {
       // See https://developers.google.com/web/updates/2017/11/dynamic-import
       import('./lazy-element.js').then((LazyElement) => {
@@ -50,7 +49,6 @@ class StartPolymer3 extends PolymerElement {
       });
       this.loadComplete = true;
     }
-    //this.pie=event.detail.value;
   }
 
   static get template () {
@@ -61,7 +59,6 @@ class StartPolymer3 extends PolymerElement {
       <p>[[message]]</p>
       <paper-checkbox 
         checked={{pie}}>I like pie.</paper-checkbox>
-        <!-- on-checked-changed="togglePie"-->
       <template is="dom-if" if=[[pie]]>
         <lazy-element><p>lazy loading...</p></lazy-element>
       </template>
