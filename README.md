@@ -19,7 +19,7 @@ and its prerequisites.
 * [Git](https://git-scm.com/download/)
 * [Node.js](https://nodejs.org/en/)
 * [npm](https://www.npmjs.com/)
-* [Yarn](https://yarnpkg.com/en/)
+* [Yarn](https://yarnpkg.com/en/) is not required for building this project, but we recommend using `yarn add --flat` if you want to add any new dependencies.
 
 When you've installed the prerequisites, run the following command to install the Polymer CLI globally:
 
