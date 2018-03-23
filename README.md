@@ -37,6 +37,6 @@ When you've installed the Polymer CLI and its prerequisites, run the following c
 npm install -g polymer-cli@next
 git clone https://github.com/katejeffreys/start-polymer3.git
 cd start-polymer3
-npm install
+yarn install --flat
 polymer serve --open --npm --module-resolution=node
 ```
