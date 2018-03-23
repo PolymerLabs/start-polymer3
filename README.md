@@ -1,6 +1,6 @@
 # Start Polymer 3.0 
 
-A Polymer 3.0 Hello World app. See it deployed at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com).
+A simple Polymer 3.0 demo app. See it deployed at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com).
 
 Note: Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
 
@@ -39,4 +39,3 @@ git clone https://github.com/katejeffreys/start-polymer3.git
 cd start-polymer3
 yarn install --flat
 polymer serve --open --npm --module-resolution=node
-```
