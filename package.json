@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/katejeffreys/start-polymer3.git",
-  "author": "Kate Jeffreys <katejeffreys@google.com>",
-  "license": "MIT",
+  "author": "The Polymer Project Authors",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "@polymer/paper-checkbox": "^3.0.0-pre.12",
     "@polymer/polymer": "^3.0.0-pre.12"
