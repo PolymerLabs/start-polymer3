@@ -1,4 +1,4 @@
-// Import statements use bare module specifiers.
+// Import statements in Polymer 3.0 can now use package names.
 // polymer-element.js now exports PolymerElement instead of Element,
 // so no need to change the symbol. 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
@@ -13,6 +13,11 @@ class StartPolymer3 extends PolymerElement {
         value: ''
       },
       pie: {
+        type: Boolean,
+        value: false,
+        observer: 'togglePie'
+      },
+      loadComplete: {
         type: Boolean,
         value: false
       }
@@ -33,9 +38,17 @@ class StartPolymer3 extends PolymerElement {
     // Open your browser's developer tools to view the output.
     console.log(this.tagName);
   }
-
-  togglePie(event){
-    this.pie=event.detail.value;
+  
+  togglePie(){
+    if(this.pie && !this.loadComplete) {
+      // See https://developers.google.com/web/updates/2017/11/dynamic-import
+      import('./lazy-element.js').then((LazyElement) => {
+        console.log("LazyElement loaded");
+      }).catch((reason) => {
+        console.log("LazyElement failed to load", reason);
+      });
+      this.loadComplete = true;
+    }
   }
 
   static get template () {
@@ -45,10 +58,9 @@ class StartPolymer3 extends PolymerElement {
       <h1>Start Polymer 3.0</h1>
       <p>[[message]]</p>
       <paper-checkbox 
-        checked=[[pie]]
-        on-checked-changed="togglePie">I like pie.</paper-checkbox>
+        checked={{pie}}>I like pie.</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <p>You like pie.</p>
+        <lazy-element><p>lazy loading...</p></lazy-element>
       </template>
     `;
   }
