@@ -2,7 +2,9 @@
 
 A simple Polymer 3.0 demo app. See it deployed at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com).
 
-Note: Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
+Notes: 
+* Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
+* The `polymer build` command is still in progress, and won't handle dynamic imports.
 
 * [Install the Polymer CLI and its prerequisites](#install)
 * [Clone this project and serve it locally](#clone)
