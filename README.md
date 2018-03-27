@@ -40,4 +40,4 @@ npm install -g polymer-cli@next
 git clone https://github.com/katejeffreys/start-polymer3.git
 cd start-polymer3
 yarn install --flat
-polymer serve --open --npm --module-resolution=node
+polymer serve
