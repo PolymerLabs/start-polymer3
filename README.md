@@ -64,6 +64,7 @@ _The Polymer CLI build tool is still in flux for Polymer 3.0 apps. Weird stuff m
 To build the app: 
 
 ```
+yarn install --flat
 polymer build
 ```
 
