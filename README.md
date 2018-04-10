@@ -43,3 +43,14 @@ cd start-polymer3
 yarn install --flat
 polymer serve
 ```
+
+To view the app, open the `applications` link in the latest version of Chrome or Safari. For example:
+
+```
+~/start-polymer3 > polymer serve
+info:    Files in this directory are available under the following URLs
+      applications: http://127.0.0.1:8081
+      reusable components: http://127.0.0.1:8081/components/start-polymer3/
+```
+
+In the example above, you'd open http://127.0.0.1:8081.
