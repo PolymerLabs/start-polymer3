@@ -14,6 +14,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/polymer/lib/elements/dom-if.js';
 import '@polymer/paper-checkbox/paper-checkbox.js';
+import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings';
 
 class StartPolymer3 extends PolymerElement {
   static get properties () {
@@ -38,6 +39,7 @@ class StartPolymer3 extends PolymerElement {
     // If you override the constructor, always call the 
     // superconstructor first.
     super();
+    setPassiveTouchGestures(true);
     this.message = 'Hello World! I\'m a Polymer element :)';
   }
 
@@ -68,6 +70,7 @@ class StartPolymer3 extends PolymerElement {
       <h1>Start Polymer 3.0</h1>
       <p>[[message]]</p>
       <paper-checkbox 
+        noink
         checked={{pie}}>I like pie.</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
         <lazy-element><p>lazy loading...</p></lazy-element>
