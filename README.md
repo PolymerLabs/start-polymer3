@@ -6,8 +6,10 @@ Notes:
 * Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
 * The `polymer build` command is still in progress, and won't handle dynamic imports.
 
-* [Install the Polymer CLI and its prerequisites](#install)
-* [Clone this project and serve it locally](#clone)
+To use the app:
+
+  1. [Install the Polymer CLI and its prerequisites](#install)
+  2. [Clone, install and serve locally](#clone)
 
 <a name="install"></a>
 
@@ -31,13 +33,13 @@ npm install -g polymer-cli@next
 
 <a name="clone"></a>
 
-## Clone this project and serve it locally 
+## Clone, install and serve locally 
 
-When you've installed the Polymer CLI and its prerequisites, run the following commands to clone and serve the app:
+To clone the project, install its dependencies, and serve locally:
 
 ```
-npm install -g polymer-cli@next
-git clone https://github.com/katejeffreys/start-polymer3.git
+git clone https://github.com/PolymerLabs/start-polymer3.git
 cd start-polymer3
 yarn install --flat
-polymer serve --open --npm --module-resolution=node
+polymer serve
+```
