@@ -2,14 +2,14 @@
 
 A simple Polymer 3.0 demo app. See it deployed at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com).
 
-Notes: 
-* Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
-* The `polymer build` command is still in progress, and won't handle dynamic imports.
+Note: Please use the latest version of Chrome or Safari to view the app. It uses native [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import).
 
 To use the app:
 
   1. [Install the Polymer CLI and its prerequisites](#install)
   2. [Clone, install and serve locally](#clone)
+  3. [Build](#build)
+  4. [Deploy](#deploy)
 
 <a name="install"></a>
 
@@ -54,3 +54,25 @@ info:    Files in this directory are available under the following URLs
 ```
 
 In the example above, you'd open http://127.0.0.1:8081.
+
+## Build
+
+TODO: Complete this section
+
+_The Polymer CLI build tool is still in flux for Polymer 3.0 apps. Weird stuff might happen. Please keep an eye on [the Polymer project blog](https://www.polymer-project.org/blog/)-we'll make a post when the tools have been updated :)_
+
+To build the app: 
+
+```
+polymer build
+```
+
+The build is output to `build/es6-unbundled`. 
+
+## Deploy
+
+TODO: Complete this section
+
+This sample site is deployed on Firebase at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com). 
+
+Take a look at `.firebaserc` and `firebase.json` for example deployment config, and also see [the Firebase docs](https://firebase.google.com/docs/hosting/deploying).
