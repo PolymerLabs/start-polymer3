@@ -75,4 +75,29 @@ TODO: Complete this section
 
 This sample site is deployed on Firebase at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com). 
 
-Take a look at `.firebaserc` and `firebase.json` for example deployment config, and also see [the Firebase docs](https://firebase.google.com/docs/hosting/deploying).
+Take a look at `firebase.json` for example deployment config, and also see [the Firebase docs](https://firebase.google.com/docs/hosting/deploying).
+
+To deploy your own app:
+
+1.  [Install the firebase CLI tools](https://firebase.google.com/docs/cli/).
+
+    ```
+    npm install -g firebase-tools
+    firebase login
+    ```
+
+2.  From the [firebase console](https://console.firebase.google.com/), create a firebase project.
+
+3.  [Initialize firebase in your project folder](https://firebase.google.com/docs/cli/#initializing_a_project_directory). 
+
+    ```
+    firebase init
+    ```
+
+    When prompted for a `public` folder, you can enter `build/es6-unbundled` to deploy the build configuration supplied with this sample project.
+
+4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment).
+
+    ```
+    firebase deploy
+    ```
