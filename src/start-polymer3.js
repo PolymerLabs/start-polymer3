@@ -39,6 +39,8 @@ class StartPolymer3 extends PolymerElement {
     // If you override the constructor, always call the 
     // superconstructor first.
     super();
+    // Resolve warning about scroll performance 
+    // See https://developers.google.com/web/updates/2016/06/passive-event-listeners
     setPassiveTouchGestures(true);
     this.message = 'Hello World! I\'m a Polymer element :)';
   }
@@ -49,6 +51,7 @@ class StartPolymer3 extends PolymerElement {
     // Output the custom element's HTML tag to the browser console.
     // Open your browser's developer tools to view the output.
     console.log(this.tagName);
+    this.$.omgpie.focus();
   }
   
   togglePie(){
@@ -67,9 +70,17 @@ class StartPolymer3 extends PolymerElement {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`
+      <style>
+        paper-checkbox {
+          --paper-checkbox-checked-ink-color: #FFFFFF;
+          --paper-checkbox-unchecked-ink-color: #FFFFFF;
+        }
+      </style>
+
       <h1>Start Polymer 3.0</h1>
       <p>[[message]]</p>
-      <paper-checkbox 
+      <paper-checkbox id="omgpie"
+        toggles
         noink
         checked={{pie}}>I like pie.</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
