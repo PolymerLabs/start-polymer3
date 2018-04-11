@@ -80,16 +80,16 @@ Take a look at `firebase.json` for example deployment config, and also see [the 
 
 To deploy your own app:
 
-1.  [Install the firebase CLI tools](https://firebase.google.com/docs/cli/).
+1.  [Install the Firebase CLI tools](https://firebase.google.com/docs/cli/).
 
     ```
     npm install -g firebase-tools
     firebase login
     ```
 
-2.  From the [firebase console](https://console.firebase.google.com/), create a firebase project.
+2.  From the [Firebase console](https://console.firebase.google.com/), create a Firebase project.
 
-3.  [Initialize firebase in your project folder](https://firebase.google.com/docs/cli/#initializing_a_project_directory). 
+3.  [Initialize Firebase in your project folder](https://firebase.google.com/docs/cli/#initializing_a_project_directory). 
 
     ```
     firebase init
