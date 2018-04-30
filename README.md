@@ -94,11 +94,7 @@ You can deploy a built Polymer app to any web server. Suggestions are:
 
 ### Deploy with Firebase
 
-This sample site is deployed on Firebase at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com). 
-
-Take a look at `firebase.json` for example deployment config, and also see [the Firebase docs](https://firebase.google.com/docs/hosting/deploying).
-
-To deploy your own app:
+To deploy the app to your own Firebase project:
 
 1.  [Install the Firebase CLI tools](https://firebase.google.com/docs/cli/).
 
