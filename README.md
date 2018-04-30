@@ -113,13 +113,10 @@ To deploy the app to your own Firebase project:
 
     Complete the Firebase initialization process to set up your project for hosting. 
 
-        * At the prompt to select Firebase CLI features, select Hosting.
-
-        * At the prompt to select a default Firebase project, select the project you created from the Firebase console.
-
-        * At the prompt to specify a `public` folder, you can enter `build/esm-unbundled` to deploy the build configuration supplied with this sample project.
-
-        * At the prompt to configure as a single-page app, enter `Y`. 
+    * At the prompt to select Firebase CLI features, select Hosting.
+    * At the prompt to select a default Firebase project, select the project you created from the Firebase console.
+    * At the prompt to specify a `public` folder, you can enter `build/esm-unbundled` to deploy the build configuration supplied with this sample project.
+    * At the prompt to configure as a single-page app, enter `Y`. 
 
 4.  In a text editor, open `firebase.json` from your root project folder.
 
