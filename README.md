@@ -13,7 +13,7 @@ To use the app:
   3.  (Optional) [Build the `start-polymer3` project for production](#build).
   4.  (Optional) [Deploy the `start-polymer3` project](#deploy).
 
-<a name="install"></a>
+<a name="setup"></a>
 
 ## Set up a development environment for Polymer projects
 
