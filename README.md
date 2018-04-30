@@ -120,7 +120,7 @@ To deploy the app to your own Firebase project:
 
 4.  In a text editor, open `firebase.json` from your root project folder.
 
-    `hosting.ignore` is a list of files that Firebase will not deploy. Remove `"**/node_modules/**" from this list and save the file.
+    `hosting.ignore` is a list of files and folders that Firebase will not deploy. Remove the `node_modules` folder from this list and save `firebase.json`.
 
     **firebase.json: Before**
 
