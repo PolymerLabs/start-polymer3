@@ -15,8 +15,7 @@
   ],
   "builds": [
     { 
-      "preset": "es6-unbundled",
-      "addServiceWorker": true
+      "preset": "es6-unbundled"
     }
   ],
   "moduleResolution": "node",
