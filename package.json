@@ -1,12 +1,13 @@
 {
   "name": "start-polymer3",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/start-polymer3.js",
   "repository": "https://github.com/PolymerLabs/start-polymer3.git",
   "author": "The Polymer Project Authors",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@polymer/paper-checkbox": "^3.0.0-pre.12",
-    "@polymer/polymer": "^3.0.0-pre.12"
+    "@polymer/polymer": "^3.0.0-pre.12",
+    "@webcomponents/webcomponentsjs": "^1.2.0"
   }
 }

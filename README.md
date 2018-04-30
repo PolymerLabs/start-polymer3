@@ -87,7 +87,12 @@ npm install
 polymer build
 ```
 
-The build is output to `build/esm-unbundled`. 
+The build is output to `build/es6-unbundled`. To serve the built app locally:
+
+```
+cd build/es6-unbundled
+polymer serve
+```
 
 <a name="deploy"></a>
 
@@ -123,10 +128,13 @@ To deploy the app to your own Firebase project:
 
     Complete the Firebase initialization process to set up your project for hosting. 
 
-    * At the prompt to select Firebase CLI features, select Hosting.
-    * At the prompt to select a default Firebase project, select the project you created from the Firebase console.
-    * At the prompt to specify a `public` folder, you can enter `build/esm-unbundled` to deploy the build configuration supplied with this sample project.
-    * At the prompt to configure as a single-page app, enter `Y`. 
+    If you are prompted to
+
+    * **select Firebase CLI features**, select **Hosting**.
+    * **select a default Firebase project**, select the project you created from the Firebase console.
+    * **specify a `public` directory**, you can enter `build/es6-unbundled` to deploy the build configuration supplied with this sample project.
+    * **configure as a single-page app**, enter `Y`. 
+    * **overwrite `index.html`**, enter `N`.
 
 4.  In a text editor, open `firebase.json` from your root project folder.
 
@@ -137,7 +145,7 @@ To deploy the app to your own Firebase project:
     ```
     {
         "hosting": {
-            "public": "build/esm-unbundled",
+            "public": "build/esm-unbundled",    
             "ignore": [
             "firebase.json",
             "**/.*",
