@@ -6,24 +6,33 @@ Note: Please use the latest version of Chrome or Safari to view the app. It uses
 
 To use the app:
 
-  1. [Install the Polymer CLI and its prerequisites](#install)
-  2. [Clone, install and serve locally](#clone)
-  3. [Build](#build)
-  4. [Deploy](#deploy)
+  1.  [Set up a development environment for Polymer projects](#setup):
+        * [Install Polymer CLI prerequisites](#installprerequisites).
+        * [Install Polymer CLI](#installpolymercli).
+  2.  [Clone, install and serve the `start-polymer3` project locally](#clone).
+  3.  (Optional) [Build the `start-polymer3` project for production](#build).
+  4.  (Optional) [Deploy the `start-polymer3` project](#deploy).
 
 <a name="install"></a>
 
-## Install the Polymer CLI and its prerequisites
+## Set up a development environment for Polymer projects
 
-Before you can serve this project, you will need to install the Polymer CLI
+Before you can serve this project, you will need to install Polymer CLI
 and its prerequisites.
 
-**Prerequisites:**
+If you've installed Polymer CLI before, please note that you will need the `@next` version to work with this project.
+
+<a name="installprerequisites"></a>
+
+### Install Polymer CLI Prerequisites
 
 * [Git](https://git-scm.com/download/)
 * [Node.js](https://nodejs.org/en/)
 * [npm](https://www.npmjs.com/)
-* [Yarn](https://yarnpkg.com/en/)
+
+<a name="installcli"></a>
+
+### Install Polymer CLI
 
 When you've installed the prerequisites, run the following command to install the Polymer CLI globally:
 
@@ -33,14 +42,14 @@ npm install -g polymer-cli@next
 
 <a name="clone"></a>
 
-## Clone, install and serve locally 
+## Clone, install and serve the start-polymer3 project locally
 
 To clone the project, install its dependencies, and serve locally:
 
 ```
 git clone https://github.com/PolymerLabs/start-polymer3.git
 cd start-polymer3
-yarn install --flat
+npm install
 polymer serve
 ```
 
@@ -55,24 +64,35 @@ info:    Files in this directory are available under the following URLs
 
 In the example above, you'd open http://127.0.0.1:8081.
 
-## Build
+<a name="build"></a>
 
-TODO: Complete this section
+## Build the start-polymer3 project for production
 
-_The Polymer CLI build tool is still in flux for Polymer 3.0 apps. Weird stuff might happen. Please keep an eye on [the Polymer project blog](https://www.polymer-project.org/blog/)-we'll make a post when the tools have been updated :)_
+TODO: Finish this section.
 
-To build the app: 
+To build the `start-polymer3` app: 
 
 ```
-yarn install --flat
+npm install
 polymer build
 ```
 
-The build is output to `build/es6-unbundled`. 
+The build is output to `build/esm-unbundled`. 
 
-## Deploy
+<a name="deploy"></a>
 
-TODO: Complete this section
+## Deploy the start-polymer3 project
+
+TODO: Finish this section.
+
+You can deploy a built Polymer app to any web server. Suggestions are:
+
+* [Deploy with Firebase](#firebase).
+* TODO: Deploy with Google App Engine.
+
+<a name="firebase"></a>
+
+### Deploy with Firebase
 
 This sample site is deployed on Firebase at [start-polymer3.firebaseapp.com](https://start-polymer3.firebaseapp.com). 
 
@@ -95,9 +115,62 @@ To deploy your own app:
     firebase init
     ```
 
-    When prompted for a `public` folder, you can enter `build/es6-unbundled` to deploy the build configuration supplied with this sample project.
+    Complete the Firebase initialization process to set up your project for hosting. 
 
-4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment).
+        * At the prompt to select Firebase CLI features, select Hosting.
+
+        * At the prompt to select a default Firebase project, select the project you created from the Firebase console.
+
+        * At the prompt to specify a `public` folder, you can enter `build/esm-unbundled` to deploy the build configuration supplied with this sample project.
+
+        * At the prompt to configure as a single-page app, enter `Y`. 
+
+4.  In a text editor, open `firebase.json` from your root project folder.
+
+    `hosting.ignore` is a list of files that Firebase will not deploy. Remove `"**/node_modules/**" from this list and save the file.
+
+    **firebase.json: Before**
+
+    ```
+    {
+        "hosting": {
+            "public": "build/esm-unbundled",
+            "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+            ],
+            "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+            ]
+        }
+    }
+    ```
+
+    **firebase.json: After**
+
+    ```
+    {
+        "hosting": {
+            "public": "build/esm-unbundled",
+            "ignore": [
+            "firebase.json",
+            "**/.*"
+            ],
+            "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+            ]
+        }
+    }
+    ```
+
+4.  [Deploy your project](https://firebase.google.com/docs/cli/#deployment) with Firebase.
 
     ```
     firebase deploy
