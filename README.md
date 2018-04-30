@@ -8,7 +8,7 @@ To use the app:
 
   1.  [Set up a development environment for Polymer projects](#setup):
         * [Install Polymer CLI prerequisites](#installprerequisites).
-        * [Install Polymer CLI](#installpolymercli).
+        * [Install Polymer CLI](#installcli).
   2.  [Clone, install and serve the `start-polymer3` project locally](#clone).
   3.  (Optional) [Build the `start-polymer3` project for production](#build).
   4.  (Optional) [Deploy the `start-polymer3` project](#deploy).
