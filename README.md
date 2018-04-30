@@ -145,7 +145,7 @@ To deploy the app to your own Firebase project:
     ```
     {
         "hosting": {
-            "public": "build/esm-unbundled",    
+            "public": "build/es6-unbundled",    
             "ignore": [
             "firebase.json",
             "**/.*",
@@ -166,7 +166,7 @@ To deploy the app to your own Firebase project:
     ```
     {
         "hosting": {
-            "public": "build/esm-unbundled",
+            "public": "build/es6-unbundled",
             "ignore": [
             "firebase.json",
             "**/.*"
