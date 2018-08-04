@@ -7,7 +7,7 @@ Please use the latest version of Chrome or Safari to view the app. It uses nativ
 If you have done all this before:
 
 ```
-npm install -g polymer-cli@next
+npm install -g polymer-cli
 git clone https://github.com/PolymerLabs/start-polymer3.git
 cd start-polymer3
 npm install
@@ -30,8 +30,6 @@ Otherwise:
 Before you can serve this project, you will need to install Polymer CLI
 and its prerequisites.
 
-If you've installed Polymer CLI before, please note that you will need the `@next` version to work with this project.
-
 <a name="installprerequisites"></a>
 
 ### Install Polymer CLI Prerequisites
@@ -47,7 +45,7 @@ If you've installed Polymer CLI before, please note that you will need the `@nex
 When you've installed the prerequisites, run the following command to install the Polymer CLI globally:
 
 ```
-npm install -g polymer-cli@next
+npm install -g polymer-cli
 ```
 
 <a name="clone"></a>
@@ -78,8 +76,6 @@ In the example above, you'd open http://127.0.0.1:8081.
 
 ## Build the start-polymer3 project for production
 
-TODO: Finish this section.
-
 To build the `start-polymer3` app: 
 
 ```
@@ -98,12 +94,7 @@ polymer serve
 
 ## Deploy the start-polymer3 project
 
-TODO: Finish this section.
-
-You can deploy a built Polymer app to any web server. Suggestions are:
-
-* [Deploy with Firebase](#firebase).
-* TODO: Deploy with Google App Engine.
+You can deploy a built Polymer app to any web server. One way is to deploy with Firebase:
 
 <a name="firebase"></a>
 
